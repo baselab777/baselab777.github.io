@@ -7,7 +7,7 @@ Journal,2025,Learning to Represent Code Changes,"X. Tang, H. Tian, W. Pian, S. E
   pages={xx-xx},
   title={Learning to Represent Code Changes},
   volume={xx}
-}",,
+}",,data/publication/Learning_to Represent_Code_Changes.png
 Journal,2025,Automating Requirement-to-Specification Traceability Recovery in Weapon Systems via Domain-Adapted Pretrained Models,"T. Kim, K. Kim**, and K. Jo",The Journal of Software Systems (JSS),Under Review,#,"@ARTICLE{Taeyoung2025JSS,
   author={Kim, Taeyoung and Kim**, Kisub and Jo, Kwanjun},
   journal={The Journal of Software Systems (JSS)},
@@ -25,7 +25,7 @@ Journal,2025,Just-in-Time Detection of Silent Security Patches,"D. Tang, K. Kim,
   pages={xx-xx},
   title={Just-in-Time Detection of Silent Security Patches},
   volume={xx}
-}",,
+}",,data/publication/Just_in_Time_Security_Patch_Detection_LLM_At_the_Rescue_for_Data_Augmentation.png
 Journal,2025,Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models,"M. Weyssow, X. Zhou, K. Kim, D. Lo, and H. Sahraoui",ACM Transactions on Software Engineering and Methodology (TOSEM),,https://dl.acm.org/doi/pdf/10.1145/3714461,"@ARTICLE{Martin2024TOSEM,
   author={Weyssow, Martin and Zhou, Xin and Kim, Kisub and Lo, David and Sahraoui, Houari},
   journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
@@ -34,7 +34,7 @@ Journal,2025,Exploring Parameter-Efficient Fine-Tuning Techniques for Code Gener
   pages={xx-xx},
   title={Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models},
   volume={xx}
-}",,
+}",,data/publication/Exploring_Parameter_Efficient_Fine_Tuning_Techniques.png
 Journal,2025,How are We Detecting Inconsistent Method Names? An Empirical Study from Code Review Perspective,"K. Kim, X. Zhou, D. Kim, J. Lawall, K. Liu, T. Bissyandé, J. Klein, J. Lee, and D. Lo",ACM Transactions on Software Engineering and Methodology (TOSEM),,https://dl.acm.org/doi/pdf/10.1145/3711901,"@ARTICLE{Kim2023TOSEM,
   author={Kim, Kisub and Zhou, Xin and Kim, Dongsun and Lawall, Julia and Liu, Kui and Bissyandé, Tegawendé F. and Klein, Jacques and Lee, Jaekwon and Lo, David},
   journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
@@ -43,7 +43,7 @@ Journal,2025,How are We Detecting Inconsistent Method Names? An Empirical Study 
   pages={1-27},
   title={How are We Detecting Inconsistent Method Names? An Empirical Study from Code Review Perspective},
   volume={34}
-}",,
+}",,data/publication/How_Are_We_Detecting_Inconsistent_Method_Names.png
 Journal,2025,Temporal-Incremental Learning for Android Malware Detection,"T. Sun, N. Daoudi, W. Pian, K. Kim**, K. Allix, T. Bissyandé, and J. Klein",ACM Transactions on Software Engineering and Methodology (TOSEM),,https://dl.acm.org/doi/pdf/10.1145/3702990,"@ARTICLE{Tiezhu2024TOSEM,
   author={Sun, Tiezhu and Daoudi, Nadia and Pian, Weiguo and Kim**, Kisub and Allix, Kevin and Bissyandé, Tegawendé F. and Klein, Jacques},
   journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
@@ -52,7 +52,7 @@ Journal,2025,Temporal-Incremental Learning for Android Malware Detection,"T. Sun
   pages={1-30},
   title={Temporal-Incremental Learning for Android Malware Detection},
   volume={34}
-}",,
+}",,data/publication/Temporal_Incremental_Learning_for_Android_Malware.png
 Journal,2024,Leveraging Large Language Model for Automatic Patch Correctness Assessment,"X. Zhou, B. Xu, K. Kim, D. Han, T. Le Cong, J. He, B. Le, and D. Lo",Transactions on Software Engineering (TSE),,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10659742,"@ARTICLE{Xin2023TSE,
   author={Zhou, Xin and Xu, Bowen and Kim, Kisub and Han, DongGyun and Le Cong, Thanh and He, Junda and Le, Bach and Lo, David},
   journal={Transactions on Software Engineering (TSE)},
@@ -61,7 +61,7 @@ Journal,2024,Leveraging Large Language Model for Automatic Patch Correctness Ass
   pages={2865-2883},
   title={Leveraging Large Language Model for Automatic Patch Correctness Assessment},
   volume={50}
-}",,
+}",,data/publication/LLM4PatchCorrect.png
 Journal,2024,Representation Learning for Stack Overflow Posts - How Far are We?,"J. He, X. Zhou, B. Xu, T. Zhang, K. Kim**, Z. Yang, F. Thung, I. Clairine Irsan, and D. Lo",ACM Transactions on Software Engineering and Methodology (TOSEM),,https://dl.acm.org/doi/pdf/10.1145/3635711,"@ARTICLE{Junda2024TOSEM,
   author={He, Junda and Zhou, Xin and Xu, Bowen and Zhang, Ting and Kim**, Kisub and Yang, Zhou and Thung, Ferdian and Clairine Irsan, Ivana and Lo, David},
   journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
@@ -70,7 +70,7 @@ Journal,2024,Representation Learning for Stack Overflow Posts - How Far are We?,
   pages={1-24},
   title={Representation Learning for Stack Overflow Posts - How Far are We?},
   volume={33}
-}",,
+}",,data/publication/Representation_Learning_for_Stack_Overflow_Posts.png
 Journal,2023,"DexBERT - Effective, Task-Agnostic and Fine-Grained Representation Learning of Android Bytecode","T. Sun, K. Allix, K. Kim**, X. Zhou, D. Kim, D. Lo, T. Bissyandé, and J. Klein",Transactions on Software Engineering (TSE),,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10237047,"@ARTICLE{Tiezhu2023TSE,
   author={Sun, Tiezhu and Allix, Kevin and Kim**, Kisub and Zhou, Xin and Kim, Dongsun and Lo, David and Bissyandé, Tegawendé F. and Klein, Jacques},
   journal={Transactions on Software Engineering (TSE)},
@@ -79,7 +79,7 @@ Journal,2023,"DexBERT - Effective, Task-Agnostic and Fine-Grained Representation
   pages={4691-4706},
   title={DexBERT - Effective, Task-Agnostic and Fine-Grained Representation Learning of Android Bytecode},
   volume={49}
-}",,
+}",,data/publication/DexBERT.png
 Journal,2023,Big Code Search - a Bibliography,"K. Kim, S. Ghatpande, D. Kim, X. Zhou, K. Liu, T. Bissyandé, J. Klein, and Y. Le Traon",ACM Computing Surveys (CSUR),,https://dl.acm.org/doi/10.1145/3604905,"@ARTICLE{Kisub2023CSUR,
   DOI={https://doi.org/10.1145/3604905},
   author={Kim, Kisub and Ghatpande, Sankalp and Kim, Dongsun and Zhou, Xin and Liu, Kui and Bissyandé, Tegawendé F. and Klein, Jacques and Le Traon, Yves},
@@ -89,7 +89,7 @@ Journal,2023,Big Code Search - a Bibliography,"K. Kim, S. Ghatpande, D. Kim, X. 
   pages={1-49},
   title={Big Code Search - a Bibliography},
   volume={56}
-}",,
+}",,data/publication/Big_Code_Search.png
 Journal,2022,DigBug – Pre/Post-processing Operator Selection for Accurate Bug Localization,"K. Kim, S. Ghatpande, K. Liu, A. Koyuncu, D. Kim, T. Bissyandé, J. Klein, and Y. Le Traon",The Journal of Software Systems (JSS),,https://www.sciencedirect.com/science/article/pii/S0164121222000528?via%3Dihub,"@ARTICLE{Kisub2022JSS,
   DOI={https://doi.org/10.1016/j.jss.2022.111300},
   author={Kim, Kisub and Ghatpande, Sankalp and Liu, Kui and Koyuncu, Anil and Kim, Dongsun and Bissyandé, Tegawendé F. and Klein, Jacques and Le Traon, Yves},
@@ -146,70 +146,70 @@ Conference,2025,SE-Jury - An LLM-as-Ensemble-Judge Metric for Narrowing the Gap 
   year={2025 [Just Accepted]},
   serires={ASE},
   title={SE-Jury - An LLM-as-Ensemble-Judge Metric for Narrowing the Gap with Human Evaluation in SE}
-}",,
+}",,data/publication/SE_Jury.png
 Conference,2025,iCodeReviewer - Improving Secure Code Review with Mixture of Prompts,"Y. Peng, K. Kim**, L. Meng, and K. Liu",IEEE/ACM International Conference on Automated Software Engineering (ASE),Just Accepted,https://arxiv.org/abs/2510.12186,"@INPROCEEDINGS{Yun2025ASE,
   author={Peng, Yun and Kim**, Kisub and Meng, Linghan and Liu, Kui},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering (ASE)},
   year={2025 [Just Accepted]},
   serires={ASE},
   title={iCodeReviewer - Improving Secure Code Review with Mixture of Prompts}
-}",,
+}",,data/publication/iCodeReviewer.png
 Conference,2025,Investigating sparsity of self-attention,"M. Garaj, K. Kim**, and A. Stockinger",European Conference on Artificial Intelligence,,https://ebooks.iospress.nl/DOI/10.3233/FAIA251302,"@INPROCEEDINGS{Martin2025ECAI,
   author={Garaj, Martin and Kim**, Kisub and Stockinger, Alexis},
   booktitle={European Conference on Artificial Intelligence},
   year={2025},
   serires={ECAI},
   title={Investigating sparsity of self-attention}
-}",,
+}",,data/publication/Investigating_Sparsity_of_Self_Attention.png
 Conference,2025,RAML --- Toward Retrieval-augmented Localization of Malicious Payloads in Android Apps,"T. Sun, M. Alecci, Y. Song, X. Tang, K. Kim, J. Samhi, T. Bissyandé, and J. Klein",IEEE/ACM International Conference on Automated Software Engineering,Just Accepted,https://orbilu.uni.lu/bitstream/10993/65747/1/_ASE_2025__RAML__Toward_Retrieval_Augmented_Localization_of_Malicious_Payloads_in_Android_Apps.pdf,"@INPROCEEDINGS{Tiezhu2025ASE_NIER,
   author={Sun, Tiezhu and Alecci, Marco and Song, Yewei and Tang, Xunzhu and Kim, Kisub and Samhi, Jordan and Bissyandé, Tegawendé F. and Klein, Jacques},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering},
   year={2025 [Just Accepted]},
   serires={ASE},
   title={RAML --- Toward Retrieval-augmented Localization of Malicious Payloads in Android Apps}
-}",,
+}",,data/publication/RAML.png
 Conference,2024,DataRecipe --- How to Cook the Data for CodeLLM?,"K. Kim, J. Kim, B. Park, D. Kim, C. Chong, Y. Wang, T. Sun, D. Tang, J. Klein, and T. Bissyandé",IEEE/ACM International Conference on Automated Software Engineering (ASE),"Selected for IEEE Software, Practitioner's digest",https://dl.acm.org/doi/10.1145/3691620.3695593,"@INPROCEEDINGS{Kim2024ASE,
   author={Kim, Kisub and Kim, Jonghoon and Park, Byungjo and Kim, Dongsun and Chong, Chun Yong and Wang, Yuan and Sun, Tiezhu and Tang, Daniel and Klein, Jacques and Bissyandé, Tegawendé F.},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering (ASE)},
   year={2024 [Selected for IEEE Software, Practitioner's digest]},
   serires={ASE},
   title={DataRecipe --- How to Cook the Data for CodeLLM?}
-}",,
+}",,data/publication/DataRecipe.png
 Conference,2024,CodeAgent --- Autonomous Communicative Agents for Code Review,"D. Tang, K. Kim, Y. Song, C. Lothritz, B. Li, S. Ezzini, H. Tian, J. Klein, and T. Bissyandé",The Conference on Empirical Methods in Natural Language Processing (EMNLP),,https://arxiv.org/abs/2402.02172,"@INPROCEEDINGS{Xunzhu2024EMNLP,
   author={Tang, Daniel and Kim, Kisub and Song, Yewei and Lothritz, Cedric and Li, Bei and Ezzini, Saad and Tian, Haoye and Klein, Jacques and Bissyandé, Tegawendé F.},
   booktitle={The Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   year={2024},
   serires={EMNLP},
   title={CodeAgent --- Autonomous Communicative Agents for Code Review}
-}",,
+}",,data/publication/CodeAgent.png
 Conference,2024,"Out of Sight, Out of Mind - Better Automatic Vulnerability Repair by Broadening Input Ranges and Sources","X. Zhou, K. Kim**, B. Xu, D. Han, and D. Lo",IEEE/ACM International Conference on Software Engineering (ICSE),,https://arxiv.org/abs/2401.15459,"@INPROCEEDINGS{Xin2024ICSE,
   author={Zhou, Xin and Kim**, Kisub and Xu, Bowen and Han, Donggyun and Lo, David},
   booktitle={IEEE/ACM International Conference on Software Engineering (ICSE)},
   year={2024},
   serires={ICSE},
   title={Out of Sight, Out of Mind - Better Automatic Vulnerability Repair by Broadening Input Ranges and Sources}
-}",,
+}",,data/publication/Out_of_Sight_Out_of_Mind.png
 Conference,2024,Curiosity-Driven Testing for Sequential Decision-Making Process,"J. He, Z. Yang, J. Shi, C. Yang, K. Kim, B. Xu, X. Zhou, and D. Lo",IEEE/ACM International Conference on Software Engineering (ICSE),,https://arxiv.org/abs/2509.02025,"@INPROCEEDINGS{Junda2024ICSE,
   author={He, Junda and Yang, Zhou and Shi, Jieke and Yang, Chengran and Kim, Kisub and Xu, Bowen and Zhou, Xin and Lo, David},
   booktitle={IEEE/ACM International Conference on Software Engineering (ICSE)},
   year={2024},
   serires={ICSE},
   title={Curiosity-Driven Testing for Sequential Decision-Making Process}
-}",,
+}",,data/publication/Curiosity_Driven_Testing_for_Sequential_Decision_Making_Process.png
 Conference,2023,AutoConf - Automated Configuration of Unsupervised Learning Systems using Metamorphic Testing and Bayesian Optimization,"S. Lwin Khin, A. Göknil, E. Johannes Husom, S. Sen, Y. Naing Tun, and K. Kim**",IEEE/ACM International Conference on Automated Software Engineering (ASE),,https://ieeexplore.ieee.org/document/10298518/,"@INPROCEEDINGS{Shar2023ASE,
   author={Lwin Khin, Shar and Göknil, Arda and Johannes Husom, Erik and Sen, Sagar and Naing Tun, Yan and Kim**, Kisub},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering (ASE)},
   year={2023},
   serires={ASE},
   title={AutoConf - Automated Configuration of Unsupervised Learning Systems using Metamorphic Testing and Bayesian Optimization}
-}",,
+}",,data/publication/AutoConf.png
 Conference,2023,The Devil is in the Tails - An Exploratory Study on Long-tailed Distributions in Software Engineering Datasets,"X. Zhou, K. Kim**, B. Xu, J. Liu, D. Han, and D. Lo",IEEE/ACM International Conference on Automated Software Engineering (ASE),,https://arxiv.org/abs/2309.03567,"@INPROCEEDINGS{Xin2023ASE,
   author={Zhou, Xin and Kim**, Kisub and Xu, Bowen and Liu, Jiakun and Han, Donggyun and Lo, David},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering (ASE)},
   year={2023},
   serires={ASE},
   title={The Devil is in the Tails - An Exploratory Study on Long-tailed Distributions in Software Engineering Datasets}
-}",,
+}",,data/publication/The_Devil_is_in the_Tails.png
 Conference,2023,Are We Ready to Embrace Generative AI for Software Q&A?,"B. Xu, T. Nguyen, T. Le-Cong, T. Hoang, J. Liu, K. Kim, C. Gong, C. Niu, C. Wang, B. Le, and D. Lo",IEEE/ACM International Conference on Automated Software Engineering (ASE),,https://arxiv.org/abs/2307.09765,"@INPROCEEDINGS{Bowen2023ASE,
   author={Xu, Bowen and Nguyen, Thanh-Dat and Le-Cong, Thanh and Hoang, Thong and Liu, Jiakun and Kim, Kisub and Gong, Chen and Niu, Changan and Wang, Chenyu and Le, Bach and Lo, David},
   booktitle={IEEE/ACM International Conference on Automated Software Engineering (ASE)},
