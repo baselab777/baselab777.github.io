@@ -70,15 +70,13 @@
           left: 50%;
           transform: translate(-50%, -50%);
           /* 
-            정확한 16:9 비율(1.7777)을 보장하면서,
-            윈도우의 가로/세로 중 더 넓은 쪽을 기준으로 꽉 채워(Cover) 여백(검은띠)을 없앱니다.
+            위아래 화면은 다 나오게 (높이 100vh에 딱 맞춤)
+            양옆은 넘치면 잘라내도록 가로 비율을 동적으로 설정
           */
-          width: 200vw;
-          height: 112.5vw;
-          /* 200 * (9/16) = 112.5vw */
-          min-width: 177.78vh;
-          /* 100 * (16/9) = 177.77...vh */
-          min-height: 200vh;
+          height: 100vh;
+          width: 177.77vh;
+          /* 높이(100vh) 기준 16:9 비율 유지 */
+          max-width: none;
           pointer-events: none;
         }
       </style>
