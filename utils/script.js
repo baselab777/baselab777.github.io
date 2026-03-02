@@ -1216,7 +1216,7 @@ function createMemberCard(member, isKr, isAlumni) {
     const name = isKr && member.name_kr ? member.name_kr : member.name_en;
 
     // 1. Image Handling
-    const unknownImage = 'data/members/unknown.png';
+    const unknownImage = 'data/members/unknown.webp';
     let imageSrc = member.image && member.image.trim() !== '' ? member.image : unknownImage;
 
     // Fallback for image loading error (handled via onerror attribute)
