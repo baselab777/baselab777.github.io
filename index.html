@@ -53,91 +53,17 @@
     ===============================================================
     -->
 
-    <!-- 배경 영상: 유튜브 우선, 실패 시 포스터 이미지(Fallback) -->
-    <!-- 초기 로딩 시 빈 화면 방지를 위한 포스터 이미지 / 모바일 대비 -->
-    <div id="video-poster-bg" class="main-video-bg"
-      style="background-image: url('asset/og-image.png'); background-size: cover; background-position: center; z-index: -1; transition: opacity 1s ease-in-out;">
-    </div>
+    <!-- 옵션 1: [내부 파일 사용 시] 아래 코드를 주석 해제하고 src 경로에 영상 파일(mp4 등)을 넣으세요. -->
+    <!--
+    <video class="main-video-bg" autoplay loop muted playsinline preload="metadata" poster="asset/og-image.png">
+      <source src="asset/video.webm" type="video/webm">
+    </video>
+    -->
 
-    <!-- 유튜브 영상 -->
-    <!-- 유튜브 영상 ID를 변경하시려면 아래 script의 videoId와 playlist 부분을 모두 변경해주세요. -->
-    <div id="youtube-bg-container" class="main-video-bg"
-      style="opacity: 0; transition: opacity 1s ease-in-out; overflow: hidden; background: transparent;">
-      <style>
-        .yt-bg-player {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          /* 
-            위아래 화면은 다 나오게 (높이 100vh에 딱 맞춤)
-            양옆은 넘치면 잘라내도록 가로 비율을 동적으로 설정
-          */
-          height: 100vh;
-          width: 177.77vh;
-          /* 높이(100vh) 기준 16:9 비율 유지 */
-          max-width: none;
-          pointer-events: none;
-        }
-      </style>
-      <div id="youtube-player"></div>
-    </div>
-
-    <script>
-      // YouTube IFrame API 로드
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      var ytBgPlayer;
-      var ytContainer = document.getElementById('youtube-bg-container');
-      var posterBg = document.getElementById('video-poster-bg');
-
-      function onYouTubeIframeAPIReady() {
-        ytBgPlayer = new YT.Player('youtube-player', {
-          videoId: 'syeAq__MdsI', // ★ 유튜브 영상 ID 입력
-          playerVars: {
-            'autoplay': 1,
-            'controls': 0,
-            'showinfo': 0,
-            'rel': 0,
-            'loop': 1,
-            'playlist': 'syeAq__MdsI', // ★ 반복 재생을 위해 동일한 영상 ID 입력 필수
-            'mute': 1, // 자동재생을 위해 음소거 필수
-            'modestbranding': 1,
-            'playsinline': 1,
-            'disablekb': 1
-          },
-          events: {
-            'onReady': function (event) {
-              event.target.getIframe().classList.add('yt-bg-player');
-              event.target.playVideo();
-            },
-            'onStateChange': function (event) {
-              // 유튜브 영상이 실제 재생 상태(1)가 되면 유튜브 화면을 보여주고 포스터 숨김
-              if (event.data === YT.PlayerState.PLAYING) {
-                ytContainer.style.opacity = '1';
-                setTimeout(function () { posterBg.style.opacity = '0'; }, 1000);
-              }
-            },
-            'onError': function (event) {
-              // 에러 발생 시 유튜브 컨테이너를 숨김 (포스터 이미지가 계속 노출됨)
-              console.error('YouTube video failed to load. Using poster image as fallback.');
-              ytContainer.style.display = 'none';
-            }
-          }
-        });
-      }
-
-      // 유튜브 로드 타임아웃 (네트워크 지연/광고 차단기 등에 의해 API 로드가 안되는 경우 대비)
-      setTimeout(function () {
-        if (!ytBgPlayer || typeof ytBgPlayer.playVideo !== 'function') {
-          console.warn('YouTube API timeout. Using poster image as fallback.');
-          ytContainer.style.display = 'none';
-        }
-      }, 5000);
-    </script>
+    <!-- 옵션 2: [유튜브 사용 시] 아래 코드를 주석 해제하고 VIDEO_ID 부분에 유튜브 영상 ID를 넣으세요. -->
+    <iframe class="main-video-bg"
+      src="https://www.youtube.com/embed/syeAq__MdsI?autoplay=1&mute=1&loop=1&playlist=syeAq__MdsI&controls=0&showinfo=0&rel=0"
+      frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 
     <!-- 영상 오버레이 (영상이 활성화될 때만 적용됨) -->

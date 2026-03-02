@@ -588,6 +588,16 @@ ul {
     /* 클릭 방지 */
 }
 
+/* iframe(유튜브) 전용: object-fit: cover가 작동하지 않으므로 화면 비율 강제 적용 */
+iframe.main-video-bg {
+    width: 100vw;
+    height: 56.25vw;
+    /* 16:9 비율 (100 * 9 / 16) */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    /* 16:9 비율 (100 * 16 / 9) */
+}
+
 /* 영상이 있을 때(main-video-bg 형제로 컨테이너가 있을 때) 덮이는 그라데이션 오버레이 */
 .main:has(.main-video-bg) .main-overlay {
     position: absolute;
