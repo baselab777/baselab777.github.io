@@ -33,3 +33,25 @@ start,end,title_kr,title_en,sum_kr,sum_en,link,thumbnail
 1. **End 열 생략:** `end` 컬럼 내용은 비워둘 수 있습니다. 엑셀의 경우 빈 칸, 직접 작성 시 쉼표만(,,) 두면 지능적으로 파악하여 `현재(Present)`로 표시합니다.
 2. **따옴표 사용:** 제목이나 설명에 `쉼표(,)` 또는 **여러 줄 텍스트(실제 엔터키 줄바꿈)** 가 들어간다면 반드시 해당 필드를 큰따옴표(`"`)로 감싸야 오류가 발생하지 않습니다. 여러 줄을 입력할 때에도 큰따옴표로 묶어 두면 정상적으로 웹페이지에 표시됩니다.
 3. **인코딩:** 한글이 깨지지 않도록 **UTF-8** 인코딩으로 저장해야 합니다.
+
+---
+
+## 마크다운 팁 (Markdown Tip)
+프로젝트 상세 내용(`link`에 적은 `.md` 파일)을 작성할 때, 마크다운 이미지 정렬은 다음 HTML 코드를 복사해서 사용하세요.
+
+**1. 중앙 정렬 (권장)**
+```html
+<div style="text-align: center;">
+  <img src="자신의_이미지_경로.png" alt="이미지 설명" style="max-width: 100%;">
+</div>
+```
+
+**2. 좌측 정렬 (텍스트 어울림)**
+```html
+<img src="자신의_이미지_경로.png" alt="이미지 설명" style="float: left; margin-right: 15px; max-width: 50%;">
+```
+
+**3. 우측 정렬 (텍스트 어울림)**
+```html
+<img src="자신의_이미지_경로.png" alt="이미지 설명" style="float: right; margin-left: 15px; max-width: 50%;">
+```

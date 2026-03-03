@@ -61,3 +61,23 @@ This decision was made to ensure the convenience and efficiency of our researche
 - `<!-- KR -->` 태그 아래에 한국어 내용을 작성하세요.
 - `<!-- EN -->` 태그 아래에 영어 내용을 작성하세요.
 - 태그는 정확히 위와 같은 형식이어야 스크립트가 올바르게 인식합니다.
+
+### 팁: 이미지 정렬 (좌/우/중앙)
+마크다운 기본 문법에는 이미지 정렬 기능이 없으므로, HTML 태그를 혼용하여 이미지를 정렬할 수 있습니다. 이미지를 넣을 때 아래 코드를 복사하여 사용하세요.
+
+**1. 중앙 정렬 (권장)**
+```html
+<div style="text-align: center;">
+  <img src="자신의_이미지_경로.png" alt="이미지 설명" style="max-width: 100%;">
+</div>
+```
+
+**2. 좌측 정렬 (텍스트 어울림)**
+```html
+<img src="자신의_이미지_경로.png" alt="이미지 설명" style="float: left; margin-right: 15px; max-width: 50%;">
+```
+
+**3. 우측 정렬 (텍스트 어울림)**
+```html
+<img src="자신의_이미지_경로.png" alt="이미지 설명" style="float: right; margin-left: 15px; max-width: 50%;">
+```
