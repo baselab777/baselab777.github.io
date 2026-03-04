@@ -71,10 +71,12 @@ function initLanguage() {
         langElements.forEach(el => {
             const text = el.getAttribute(lang === 'kr' ? 'data-lang-kr' : 'data-lang-en');
             if (text) {
+                // 줄 바꿈 처리
+                const formattedText = text.replace(/\\n|\n/g, '<br>');
                 if (el.tagName === 'A' && el.classList.contains('nav-link')) {
-                    el.textContent = text;
+                    el.innerHTML = formattedText;
                 } else {
-                    el.textContent = text;
+                    el.innerHTML = formattedText;
                     el.style.display = '';
                 }
             } else if (!el.classList.contains('nav-link')) {
@@ -129,9 +131,9 @@ function updateElementText(el) {
     const currentLang = localStorage.getItem('preferred-lang') || 'kr';
     const isKr = currentLang === 'kr';
     if (isKr && el.hasAttribute('data-lang-kr')) {
-        el.textContent = el.getAttribute('data-lang-kr');
+        el.innerHTML = el.getAttribute('data-lang-kr').replace(/\\n|\n/g, '<br>');
     } else if (!isKr && el.hasAttribute('data-lang-en')) {
-        el.textContent = el.getAttribute('data-lang-en');
+        el.innerHTML = el.getAttribute('data-lang-en').replace(/\\n|\n/g, '<br>');
     }
 }
 
