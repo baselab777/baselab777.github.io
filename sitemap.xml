@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
   <url>
-    <loc>https://taepoung.github.io/Web/index.html</loc>
+    <loc>https://base.dgist.ac.kr/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/About.html</loc>
+    <loc>https://base.dgist.ac.kr/About.html</loc>
     <priority>0.8</priority>
   </url>
   
   <!-- Research -->
   <url>
-    <loc>https://taepoung.github.io/Web/Research.html</loc>
+    <loc>https://base.dgist.ac.kr/Research.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/Project.html</loc>
+    <loc>https://base.dgist.ac.kr/Project.html</loc>
     <priority>0.7</priority>
   </url>
 
   <!-- Publications -->
   <url>
-    <loc>https://taepoung.github.io/Web/Publications.html</loc>
+    <loc>https://base.dgist.ac.kr/Publications.html</loc>
     <priority>0.8</priority>
   </url>
 
   <!-- News -->
   <url>
-    <loc>https://taepoung.github.io/Web/News.html</loc>
+    <loc>https://base.dgist.ac.kr/News.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/News_Research.html</loc>
+    <loc>https://base.dgist.ac.kr/News_Research.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/News_Other.html</loc>
+    <loc>https://base.dgist.ac.kr/News_Other.html</loc>
     <priority>0.6</priority>
   </url>
 
   <!-- Members -->
   <url>
-    <loc>https://taepoung.github.io/Web/Professor.html</loc>
+    <loc>https://base.dgist.ac.kr/Professor.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/Students.html</loc>
+    <loc>https://base.dgist.ac.kr/Students.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/Alumni.html</loc>
+    <loc>https://base.dgist.ac.kr/Alumni.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://taepoung.github.io/Web/Supporters.html</loc>
+    <loc>https://base.dgist.ac.kr/Supporters.html</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
