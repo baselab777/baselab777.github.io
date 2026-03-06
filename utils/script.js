@@ -6,6 +6,11 @@
 // [News] 최신 소식 페이지에 표시할 뉴스 개수 (0 = 제한 없음)
 const LATEST_NEWS_COUNT = 6;
 
+// Popup Configuration
+const Enable_Popup = true;
+const Popup_Start_Date = '2026-03-06'; // 예: '2026-03-01' (시작일, 비워두면 사용 안 함)
+const Popup_End_Date = '2026-03-20';   // 예: '2026-03-31' (종료일, 비워두면 사용 안 함)
+
 // Pagination Configuration
 const ITEMS_PER_PAGE = 5;
 let currentNewsRows = []; // Store news items for pagination
@@ -39,6 +44,28 @@ async function loadComponents() {
             footerPlaceholder.innerHTML = text;
         } else {
             console.error('Footer placeholder not found!');
+        }
+
+        // 팝업 로드 (홈페이지일 경우에만)
+        const pageType = document.body.getAttribute('data-page-type');
+        if (pageType === 'home' && Enable_Popup) {
+            let showPopup = true;
+            const now = new Date();
+
+            if (Popup_Start_Date) {
+                const startDate = new Date(Popup_Start_Date);
+                startDate.setHours(0, 0, 0, 0); // 시작일의 00:00:00 부터
+                if (now < startDate) showPopup = false;
+            }
+            if (Popup_End_Date) {
+                const endDate = new Date(Popup_End_Date);
+                endDate.setHours(23, 59, 59, 999); // 종료일의 23:59:59 까지
+                if (now > endDate) showPopup = false;
+            }
+
+            if (showPopup) {
+                await loadPopupComponent();
+            }
         }
 
         // 로딩 완료 후 초기화 로직 실행
@@ -282,6 +309,106 @@ window.scrollToTop = function () {
         behavior: 'smooth'
     });
 };
+
+// ===========================================
+// Popup Components & Logic 
+// ===========================================
+async function loadPopupComponent() {
+    try {
+        const response = await fetch('/components/popup.html');
+        if (!response.ok) {
+            console.warn('Popup component not found or failed to load.');
+            return;
+        }
+        const text = await response.text();
+        document.body.insertAdjacentHTML('beforeend', text);
+
+        // 팝업 로직 초기설정
+        initPopupLogic();
+    } catch (e) {
+        console.error('Error loading popup:', e);
+    }
+}
+
+function initPopupLogic() {
+    const popup = document.getElementById('homepage-popup');
+    if (!popup) return;
+
+    // 만약 localStorage에 저장된 날짜가 오늘 날짜와 같다면 팝업을 띄우지 않음
+    const hideDate = localStorage.getItem('hide-popup-date');
+    const today = new Date().toDateString();
+
+    if (hideDate !== today) {
+        // 약간의 지연 후 띄우기 (UX개선)
+        setTimeout(() => {
+            popup.style.display = 'flex';
+            // Trigger reflow
+            void popup.offsetWidth;
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // 현재 언어 상태 반영
+            updateElementTextInPopup(popup);
+        }, 500);
+    }
+}
+
+window.closePopup = function () {
+    const popup = document.getElementById('homepage-popup');
+    if (!popup) return;
+
+    const dontShowCheckbox = document.getElementById('popup-dont-show');
+    if (dontShowCheckbox && dontShowCheckbox.checked) {
+        localStorage.setItem('hide-popup-date', new Date().toDateString());
+    }
+
+    popup.classList.remove('active');
+    setTimeout(() => {
+        popup.style.display = 'none';
+
+        // 만약 다른 모달이 열려있지 않다면 overflow 복구
+        if (!document.querySelector('.modal-overlay.active')) {
+            document.body.style.overflow = '';
+        }
+    }, 300);
+};
+
+window.onPopupLinkClick = function (url) {
+    const popup = document.getElementById('homepage-popup');
+    if (popup) {
+        const dontShowCheckbox = document.getElementById('popup-dont-show');
+        if (dontShowCheckbox && dontShowCheckbox.checked) {
+            localStorage.setItem('hide-popup-date', new Date().toDateString());
+        }
+    }
+
+    closePopup(); // 동작 수행 전/후 팝업을 닫도록 지시 (내부링크는 어차피 페이지 변경되므로 무관)
+
+    setTimeout(() => {
+        if (url.startsWith('mailto:')) {
+            // 이메일: 메일 클라이언트 띄우기
+            window.location.href = url;
+        } else if (url.startsWith('http')) {
+            // 외부 링크: 새 창 띄우기
+            window.open(url, '_blank');
+        } else {
+            // 내부 링크: 현재 창에서 이동
+            window.location.href = url;
+        }
+    }, 100); // 팝업 닫기 애니메이션이 부드럽게 시작할 시간차 부여
+};
+
+function updateElementTextInPopup(popupNode) {
+    const currentLang = localStorage.getItem('preferred-lang') || 'kr';
+    const langElements = popupNode.querySelectorAll('[data-lang-kr], [data-lang-en]');
+
+    langElements.forEach(el => {
+        const text = el.getAttribute(currentLang === 'kr' ? 'data-lang-kr' : 'data-lang-en');
+        if (text) {
+            el.innerHTML = text.replace(/\\n|\n/g, '<br>');
+        }
+    });
+}
 
 
 // ===========================================

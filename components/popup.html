@@ -1,0 +1,51 @@
+<!-- Popup Component -->
+<div id="homepage-popup" class="modal-overlay">
+    <div class="modal-content" style="max-width: 500px; height: auto; max-height: 80vh;">
+        <div class="modal-header">
+            <span class="modal-title" data-lang-kr="알림" data-lang-en="Notice">알림</span>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="lang-toggle" style="transform: scale(0.85); transform-origin: right center;">
+                    <div class="lang-slider"></div>
+                    <div class="lang-btn active" data-lang="kr">KR</div>
+                    <div class="lang-btn" data-lang="en">EN</div>
+                </div>
+                <button class="modal-close" onclick="closePopup()">&times;</button>
+            </div>
+        </div>
+        <div id="popup-body" class="modal-body" style="padding: 2rem;">
+            <!-- 팝업 내용 -->
+            <h3 style="margin-bottom: 1rem; color: var(--color-text-main);" data-lang-kr="DGIST 오픈랩 신청"
+                data-lang-en="DGIST Openlab Application">DGIST 오픈랩 신청</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6;"
+                data-lang-kr="DGIST 오픈랩 신청이 진행되고 있습니다.<br> 관심이 있으신 분들은 이동하기를 클릭해 자세한 내용을 확인해 주세요.<br><br> KST 2026-03-06 10:00 ~ 2026-03-20 16:00"
+                data-lang-en="DGIST Openlab Application is currently in progress. <br>For more information, please visit the DGIST Openlab website. <br><br> KST 2026-03-06 10:00 ~ 2026-03-20 16:00.">
+                2026-03-06 10:00 ~ 2026-03-20 16:00 까지 DGIST 오픈랩 신청이 진행되고 있습니다.<br>관심이 있으신 분들은 이동하기를 클릭해 자세한 내용을 확인해
+                주세요.</p>
+        </div>
+        <div class="modal-footer"
+            style="padding: 1rem 1.5rem; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; border-radius: 0 0 var(--radius-md) var(--radius-md);">
+            <label
+                style="display: flex; align-items: center; cursor: pointer; color: var(--color-text-muted); font-size: 0.9rem;">
+                <input type="checkbox" id="popup-dont-show" style="margin-right: 0.5rem; cursor: pointer;">
+                <span data-lang-kr="오늘 하루 열지 않기" data-lang-en="Do not show for today">오늘 하루 열지 않기</span>
+            </label>
+            <!-- 버튼 동작 예시 (링크 형식에 따라 내부이동/새창열기/이메일 처리가 자동으로 작동합니다) -->
+            <!-- 1. 외부 링크 (새 창 띄우기) -->
+            <button onclick="onPopupLinkClick(`https://www.dgist.ac.kr/prog/scsbjtOpenlab/gadm/sub03_02/list.do`)"
+                class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;" data-lang-kr="이동하기"
+                data-lang-en="Move">이동하기</button>
+
+            <!-- 2. 내부 링크 (현재 창 이동, 주석 처리됨)
+            <button onclick="onPopupLinkClick('/News')"
+                class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;" data-lang-kr="자세히 보기"
+                data-lang-en="Read More">자세히 보기</button>
+            -->
+
+            <!-- 3. 이메일 전송 (메일 앱 열기, 주석 처리됨)
+            <button onclick="onPopupLinkClick('mailto:contact@baselab.org')"
+                class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;" data-lang-kr="메일 보내기"
+                data-lang-en="Send Email">메일 보내기</button>
+            -->
+        </div>
+    </div>
+</div>
