@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://base.dgist.ac.kr/sitemap.xml
+Sitemap: https://baselab777.github.io/sitemap.xml
