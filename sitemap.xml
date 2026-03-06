@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
   <url>
-    <loc>https://base.dgist.ac.kr/index.html</loc>
+    <loc>https://base.dgist.ac.kr/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/About.html</loc>
+    <loc>https://base.dgist.ac.kr/About</loc>
     <priority>0.8</priority>
   </url>
   
   <!-- Research -->
   <url>
-    <loc>https://base.dgist.ac.kr/Research.html</loc>
+    <loc>https://base.dgist.ac.kr/Research</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/Project.html</loc>
+    <loc>https://base.dgist.ac.kr/Research/Project</loc>
     <priority>0.7</priority>
   </url>
 
   <!-- Publications -->
   <url>
-    <loc>https://base.dgist.ac.kr/Publications.html</loc>
+    <loc>https://base.dgist.ac.kr/Publications</loc>
     <priority>0.8</priority>
   </url>
 
   <!-- News -->
   <url>
-    <loc>https://base.dgist.ac.kr/News.html</loc>
+    <loc>https://base.dgist.ac.kr/News</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/News_Research.html</loc>
+    <loc>https://base.dgist.ac.kr/News/Research</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/News_Other.html</loc>
+    <loc>https://base.dgist.ac.kr/News/Other</loc>
     <priority>0.6</priority>
   </url>
 
   <!-- Members -->
   <url>
-    <loc>https://base.dgist.ac.kr/Professor.html</loc>
+    <loc>https://base.dgist.ac.kr/Members/Professor</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/Students.html</loc>
+    <loc>https://base.dgist.ac.kr/Members/Students</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/Alumni.html</loc>
+    <loc>https://base.dgist.ac.kr/Members/Alumni</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://base.dgist.ac.kr/Supporters.html</loc>
+    <loc>https://base.dgist.ac.kr/Members/Supporters</loc>
     <priority>0.5</priority>
   </url>
 </urlset>

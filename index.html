@@ -7,21 +7,21 @@
   <!-- Encoding type -->
   <meta charset="UTF-8">
   <!-- Responsive design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <!-- Favicon -->
-  <link rel="icon" href="asset/favicon.png" type="image/png">
+  <link rel="icon" href="/asset/favicon.png" type="image/png">
   <!-- Brower tab Title -->
   <title>Home | BASE Lab</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="utils/style.css">
-  <link rel="stylesheet" href="utils/modal.css">
+  <link rel="stylesheet" href="/utils/style.css">
+  <link rel="stylesheet" href="/utils/modal.css">
 
   <!-- Open Graph / Link Preview -->
   <meta property="og:title" content="BASE Lab">
   <meta property="og:description"
     content="We explore the interaction between AI and Software Engineering. / 인공지능과 소프트웨어 공학의 상호작용을 연구합니다.">
-  <meta property="og:image" content="asset/og-image.png">
-  <meta property="og:url" content="https://base.dgist.ac.kr/index.html">
+  <meta property="og:image" content="/asset/og-image.png">
+  <meta property="og:url" content="https://base.dgist.ac.kr/">
   <meta property="og:type" content="website">
 
   <!-- SEO Meta Tags -->
@@ -56,7 +56,7 @@
     <!-- 옵션 1: [내부 파일 사용 시] 아래 코드를 주석 해제하고 src 경로에 영상 파일(mp4 등)을 넣으세요. -->
     <!--
     <video class="main-video-bg" autoplay loop muted playsinline preload="metadata" poster="asset/og-image.png">
-      <source src="asset/video.webm" type="video/webm">
+      <source src="/asset/video.webm" type="video/webm">
     </video>
     -->
 
@@ -83,23 +83,23 @@
 
       <div class="main-buttons" style="flex-wrap: wrap;">
         <!-- About -->
-        <a href="About.html" class="btn btn-outline" data-lang-kr="연구실 소개" data-lang-en="About Lab">
+        <a href="/About" class="btn btn-outline" data-lang-kr="연구실 소개" data-lang-en="About Lab">
           연구실 소개
         </a>
         <!-- Research -->
-        <a href="Research.html" class="btn btn-outline" data-lang-kr="연구 분야" data-lang-en="Research Areas">
+        <a href="/Research" class="btn btn-outline" data-lang-kr="연구 분야" data-lang-en="Research Areas">
           연구 분야
         </a>
         <!-- Members -->
-        <a href="Professor.html" class="btn btn-outline" data-lang-kr="구성원" data-lang-en="Members">
+        <a href="/Members/Professor" class="btn btn-outline" data-lang-kr="구성원" data-lang-en="Members">
           구성원
         </a>
         <!-- Publications -->
-        <a href="Publications.html" class="btn btn-outline" data-lang-kr="출판물" data-lang-en="Publications">
+        <a href="/Publications" class="btn btn-outline" data-lang-kr="출판물" data-lang-en="Publications">
           출판물
         </a>
         <!-- News -->
-        <a href="News.html" class="btn btn-outline" data-lang-kr="최신 소식" data-lang-en="Recent News">
+        <a href="/News" class="btn btn-outline" data-lang-kr="최신 소식" data-lang-en="Recent News">
           최신 소식
         </a>
       </div>
@@ -120,8 +120,8 @@
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <h2 style="font-size: 1.8rem; font-weight: 700;" data-lang-kr="최신 소식" data-lang-en="Recent News">최신 소식</h2>
-        <a href="News.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;"
-          data-lang-kr="더보기 +" data-lang-en="More +">더보기 +</a>
+        <a href="/News" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;" data-lang-kr="더보기 +"
+          data-lang-en="More +">더보기 +</a>
       </div>
 
       <div id="recent-news-list"
@@ -150,7 +150,7 @@
 
   <!-- Marked.js for Markdown rendering (News Modal) -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="utils/script.js"></script>
+  <script src="/utils/script.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ async function loadComponents() {
     try {
         const headerPlaceholder = document.getElementById('header-placeholder');
         if (headerPlaceholder) {
-            const response = await fetch('components/header.html');
+            const response = await fetch('/components/header.html');
             if (!response.ok) {
                 throw new Error(`Failed to load header: ${response.status} ${response.statusText}`);
             }
@@ -31,7 +31,7 @@ async function loadComponents() {
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
-            const response = await fetch('components/footer.html');
+            const response = await fetch('/components/footer.html');
             if (!response.ok) {
                 throw new Error(`Failed to load footer: ${response.status} ${response.statusText}`);
             }
@@ -301,7 +301,7 @@ async function loadProject(pageNum = 1, shouldScroll = false, filterCategory = c
         if (!container) return;
 
         if (currentProjectRows.length === 0) {
-            const response = await fetch('data/project.csv');
+            const response = await fetch('/Research/project.csv');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -487,7 +487,7 @@ async function loadNews(pageType, pageNum = 1, shouldScroll = false) {
         }
 
         if (currentNewsRows.length === 0) {
-            const response = await fetch('data/news.csv');
+            const response = await fetch('/News/news.csv');
             const text = await response.text();
             currentNewsRows = parseCSV(text);
         }
@@ -578,11 +578,15 @@ function renderNewsPage(rows, container, isKr, useWrapper = true) {
         if (!link) {
             additionalClass = ' disabled';
         } else {
-            clickAction = `onclick="openNewsModal('${link}')"`;
+            if (link.startsWith('http')) {
+                clickAction = `onclick="window.open('${link}', '_blank'); return false;"`;
+            } else {
+                clickAction = `onclick="openNewsModal('/News/data/contents/${link}')"`;
+            }
         }
 
         const defaultThumb = 'asset/default-thumb.png';
-        const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? item.thumbnail : defaultThumb;
+        const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? `/News/data/thumbnail/${item.thumbnail}` : defaultThumb;
 
         html += `
         <div class="publication-card">
@@ -629,11 +633,15 @@ function renderProjectPage(rows, container, isKr, useWrapper = true) {
         if (!link) {
             additionalClass = ' disabled';
         } else {
-            clickAction = `onclick="openNewsModal('${link}')"`; // We reuse the news modal since the rendering is identical
+            if (link.startsWith('http')) {
+                clickAction = `onclick="window.open('${link}', '_blank'); return false;"`;
+            } else {
+                clickAction = `onclick="openNewsModal('/Research/data/contents/${link}')"`;
+            }
         }
 
         const defaultThumb = 'asset/default-thumb.png';
-        const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? item.thumbnail : defaultThumb;
+        const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? `/Research/data/thumbnail/${item.thumbnail}` : defaultThumb;
 
         // Date Handling: start ~ end (Year only)
         const startStr = item.start ? item.start.trim().split('.')[0].split('-')[0] : '';
@@ -710,7 +718,7 @@ window.openNewsModal = async function (url) {
     if (!url || url.trim() === '') return;
 
     // 1. External Link Check
-    if (url.startsWith('http') || url.startsWith('https')) {
+    if (url.startsWith('http')) {
         window.open(url, '_blank');
         return;
     }
@@ -843,7 +851,7 @@ let currentPubFilter = 'All'; // 전역으로 필터 상태 관리
 async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory = currentPubFilter) {
     try {
         currentPubFilter = filterCategory; // 상태 업데이트
-        const response = await fetch('data/publications.csv');
+        const response = await fetch('/Publications/publications.csv');
         const text = await response.text();
         const rows = parseCSV(text);
 
@@ -983,8 +991,8 @@ function createPublicationCard(item) {
         linksHtml += `<button class="icon-btn bibtex-copy-btn" data-bibtex="${safeBibtex}" onclick="copyBibtex(this)" aria-label="Copy BibTeX"><i class="ri-double-quotes-l"></i></button>`;
     }
 
-    const defaultThumb = 'asset/default-thumb.png';
-    const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? item.thumbnail : defaultThumb;
+    const defaultThumb = '/Publications/thumbnail/default-thumb.png';
+    const thumbSrc = item.thumbnail && item.thumbnail.trim() !== '' ? `/Publications/thumbnail/${item.thumbnail}` : defaultThumb;
 
     return `
     <div class="publication-card">
@@ -1111,7 +1119,7 @@ let allMemberRows = [];
 
 async function loadMembers(pageType) {
     try {
-        const response = await fetch('./data/members.csv');
+        const response = await fetch('/Members/members.csv');
         const text = await response.text();
         allMemberRows = parseCSV(text); // 데이터 저장
 
@@ -1218,8 +1226,8 @@ function createMemberCard(member, isKr, isAlumni) {
     const name = isKr && member.name_kr ? member.name_kr : member.name_en;
 
     // 1. Image Handling
-    const unknownImage = 'data/members/unknown.webp';
-    let imageSrc = member.image && member.image.trim() !== '' ? member.image : unknownImage;
+    const unknownImage = '/Members/data/images/unknown.webp';
+    let imageSrc = (member.image && member.image.trim() !== '') ? `/Members/data/images/${member.image}` : unknownImage;
 
     // Fallback for image loading error (handled via onerror attribute)
     let imageHtml = '';
@@ -1313,7 +1321,7 @@ function createMemberCard(member, isKr, isAlumni) {
                 } else if (cvLink.startsWith('http')) {
                     onClick = `onclick="window.open('${cvLink}', '_blank'); return false;"`;
                 } else {
-                    onClick = `onclick="openCVModal('${cvLink}')"`;
+                    onClick = `onclick="openCVModal('/Members/data/cvs/${cvLink}')"`;
                 }
 
                 return `<a href="#" ${onClick} class="cv-btn${additionalClass}" style="margin-top: 0.5rem; padding: 0.3rem 1rem; font-size: 0.85rem;">CV</a>`;
@@ -1360,7 +1368,7 @@ function createMemberCard(member, isKr, isAlumni) {
                     onClick = `onclick="window.open('${cvLink}', '_blank'); return false;"`;
                 } else {
                     // Internal md -> Open Modal
-                    onClick = `onclick="openCVModal('${cvLink}')"`;
+                    onClick = `onclick="openCVModal('/Members/data/cvs/${cvLink}')"`;
                 }
 
                 return `<a href="#" ${onClick} class="cv-btn${additionalClass}">CV</a>`;
