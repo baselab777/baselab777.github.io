@@ -3,7 +3,7 @@
    ========================================================================== */
 @font-face {
     font-family: 'CustomFont';
-    src: url('../asset/font.ttf') format('truetype');
+    src: url('../asset/font.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -40,8 +40,8 @@
        [폰트 설정 (Typography)] 
        Google Fonts에서 폰트를 가져와서 여기에 적용할 수 있습니다.
     */
-    --font-heading: 'CustomFont', 'Inter', system-ui, -apple-system, sans-serif;
-    --font-body: 'CustomFont', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'CustomFont', system-ui, -apple-system, sans-serif;
+    --font-body: 'CustomFont', system-ui, -apple-system, sans-serif;
 
     /* [간격 및 기타 설정 (Spacing & Misc)] - 초보자라면 건드리지 않아도 됩니다. */
     --spacing-sm: 0.5rem;
