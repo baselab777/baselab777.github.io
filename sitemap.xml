@@ -6,55 +6,55 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/About</loc>
+    <loc>https://baselab777.github.io/About/</loc>
     <priority>0.8</priority>
   </url>
   
   <!-- Research -->
   <url>
-    <loc>https://baselab777.github.io/Research</loc>
+    <loc>https://baselab777.github.io/Research/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/Research/Project</loc>
+    <loc>https://baselab777.github.io/Research/Project/</loc>
     <priority>0.7</priority>
   </url>
 
   <!-- Publications -->
   <url>
-    <loc>https://baselab777.github.io/Publications</loc>
+    <loc>https://baselab777.github.io/Publications/</loc>
     <priority>0.8</priority>
   </url>
 
   <!-- News -->
   <url>
-    <loc>https://baselab777.github.io/News</loc>
+    <loc>https://baselab777.github.io/News/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/News/Research</loc>
+    <loc>https://baselab777.github.io/News/Research/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/News/Other</loc>
+    <loc>https://baselab777.github.io/News/Other/</loc>
     <priority>0.6</priority>
   </url>
 
   <!-- Members -->
   <url>
-    <loc>https://baselab777.github.io/Members/Professor</loc>
+    <loc>https://baselab777.github.io/Members/Professor/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/Members/Students</loc>
+    <loc>https://baselab777.github.io/Members/Students/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/Members/Alumni</loc>
+    <loc>https://baselab777.github.io/Members/Alumni/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://baselab777.github.io/Members/Supporters</loc>
+    <loc>https://baselab777.github.io/Members/Supporters/</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
