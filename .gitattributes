@@ -1,0 +1,22 @@
+* text=auto
+
+# Binary files - prevent CRLF conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.mp4 binary
+*.webm binary
+*.mov binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.tar binary
+*.7z binary
