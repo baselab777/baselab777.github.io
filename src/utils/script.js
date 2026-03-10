@@ -83,7 +83,7 @@ function initLanguage() {
     const langBtns = document.querySelectorAll('.lang-btn');
     const langElements = document.querySelectorAll('[data-lang-kr], [data-lang-en]');
 
-    function setLanguage(lang) {
+    function setLanguage(lang, isInitialLoad = false) {
         // 토글 버튼 애니메이션
         document.querySelectorAll('.lang-toggle').forEach(container => {
             container.classList.toggle('en-active', lang === 'en');
@@ -116,22 +116,24 @@ function initLanguage() {
         if (pageType) {
             // Member pages
             if (['students', 'alumni', 'supporters'].includes(pageType)) {
-                renderMemberContent(pageType);
+                loadMembers(pageType, isInitialLoad);
             }
             // News pages & Home page (for Recent News)
             else if (['news-latest', 'news-research', 'news-other'].includes(pageType)) {
-                loadNews(pageType);
+                loadNews(pageType, 1, false, isInitialLoad);
             }
             else if (pageType === 'home') {
-                loadNews('home');
+                loadNews('home', 1, false, isInitialLoad);
             }
             // Publication pages
             else if (pageType === 'publications') {
-                loadPublications();
+                // loadPublications(pageNum=1, scrollToTop=false, filterCategory='All', isInitialLoad)
+                loadPublications(1, false, currentPubFilter, isInitialLoad);
             }
             // Project pages
             else if (pageType === 'project') {
-                loadProject();
+                // loadProject(pageNum=1, shouldScroll=false, filterCategory='All', isInitialLoad)
+                loadProject(1, false, currentProjectFilter, isInitialLoad);
             }
         }
     }
@@ -146,7 +148,7 @@ function initLanguage() {
     });
 
     const savedLang = localStorage.getItem('preferred-lang') || 'kr';
-    setLanguage(savedLang);
+    setLanguage(savedLang, true);
 }
 
 // Helper: 요소의 텍스트를 현재 언어 설정에 맞게 업데이트
@@ -412,16 +414,31 @@ function updateElementTextInPopup(popupNode) {
 // ===========================================
 let currentProjectFilter = 'All'; // 전역으로 필터 상태 관리
 
-async function loadProject(pageNum = 1, shouldScroll = false, filterCategory = currentProjectFilter) {
+async function loadProject(pageNum = 1, shouldScroll = false, filterCategory = currentProjectFilter, isInitialLoad = false) {
     try {
         currentProjectFilter = filterCategory; // 상태 업데이트
         if (shouldScroll) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        const container = document.getElementById('news-list');
+        const container = document.getElementById('project-list');
         const filterContainer = document.getElementById('project-filters');
         if (!container) return;
+
+        const currentLang = localStorage.getItem('preferred-lang') || 'kr';
+        const isKr = currentLang === 'kr';
+
+        // Render Filter Buttons
+        if (filterContainer) {
+            renderProjectFilters(filterContainer, isKr);
+        }
+
+        // Hydration check: if initial load and container is already nicely populated by Python build
+        if (isInitialLoad && container.children.length > 0 && container.innerHTML.includes('publication-card')) {
+            // Container already has HTML generated for SEO. Skip fetching CSV for initial view to preserve static HTML.
+            // Pagination requires fetching CSV, but initial view doesn't.
+            return;
+        }
 
         if (currentProjectRows.length === 0) {
             const response = await fetch('/Research/project.csv');
@@ -433,13 +450,6 @@ async function loadProject(pageNum = 1, shouldScroll = false, filterCategory = c
         }
 
         const rows = currentProjectRows;
-        const currentLang = localStorage.getItem('preferred-lang') || 'kr';
-        const isKr = currentLang === 'kr';
-
-        // Render Filter Buttons
-        if (filterContainer) {
-            renderProjectFilters(filterContainer, isKr);
-        }
 
         let filteredRows = [];
         const currentYear = new Date().getFullYear();
@@ -603,10 +613,25 @@ document.addEventListener('keydown', (e) => {
 // ===========================================
 // News Loading & Modal
 // ===========================================
-async function loadNews(pageType, pageNum = 1, shouldScroll = false) {
+async function loadNews(pageType, pageNum = 1, shouldScroll = false, isInitialLoad = false) {
     try {
         if (shouldScroll) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const container = document.getElementById('news-list');
+        if (!container && pageType !== 'home') return;
+
+        let targetContainer = container;
+        if (pageType === 'home') {
+            targetContainer = document.getElementById('recent-news-list');
+            if (!targetContainer) return;
+        }
+
+        // Hydration check: if initial load and container is already nicely populated by Python build
+        if (isInitialLoad && targetContainer.children.length > 0 && targetContainer.innerHTML.includes('publication-card')) {
+            // Container already has HTML generated for SEO. Skip fetching CSV for initial view to preserve static HTML.
+            return;
         }
 
         if (currentNewsRows.length === 0) {
@@ -616,14 +641,10 @@ async function loadNews(pageType, pageNum = 1, shouldScroll = false) {
         }
 
         const rows = currentNewsRows;
-        const container = document.getElementById('news-list');
-        if (!container && pageType !== 'home') return;
-
         const currentLang = localStorage.getItem('preferred-lang') || 'kr';
         const isKr = currentLang === 'kr';
 
         let filteredRows = [];
-        let targetContainer = container;
 
         if (pageType === 'news-latest') {
             filteredRows = rows;
@@ -632,8 +653,6 @@ async function loadNews(pageType, pageNum = 1, shouldScroll = false) {
         } else if (pageType === 'news-other') {
             filteredRows = rows.filter(r => r.type && r.type.toLowerCase() === 'other');
         } else if (pageType === 'home') {
-            targetContainer = document.getElementById('recent-news-list');
-            if (!targetContainer) return;
             filteredRows = rows;
         } else {
             filteredRows = rows;
@@ -971,12 +990,9 @@ window.closeCVModal = function () {
 // ===========================================
 let currentPubFilter = 'All'; // 전역으로 필터 상태 관리
 
-async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory = currentPubFilter) {
+async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory = currentPubFilter, isInitialLoad = false) {
     try {
         currentPubFilter = filterCategory; // 상태 업데이트
-        const response = await fetch('/Publications/publications.csv');
-        const text = await response.text();
-        const rows = parseCSV(text);
 
         const container = document.getElementById('publication-list');
         const filterContainer = document.getElementById('publication-filters');
@@ -989,6 +1005,17 @@ async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory
         if (filterContainer) {
             renderPublicationFilters(filterContainer, isKr);
         }
+
+        // Hydration check: if initial load and container is already nicely populated by Python build
+        if (isInitialLoad && container.children.length > 0 && container.innerHTML.includes('publication-card')) {
+            // Container already has HTML generated for SEO. Skip fetching CSV for initial view to preserve static HTML.
+            // Pagination requires fetching CSV, but initial view doesn't.
+            return;
+        }
+
+        const response = await fetch('/Publications/publications.csv');
+        const text = await response.text();
+        const rows = parseCSV(text);
 
         // 1. Filter out empty rows & apply Category Filter, then sort descending by year
         let filteredData = rows.filter(r => r.year && r.year.trim() !== '');
@@ -1018,7 +1045,7 @@ async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory
         container.innerHTML = '';
 
         const topPag = document.createElement('div');
-        renderPagination(topPag, totalPages, pageNum, (newPage) => loadPublications(newPage, true));
+        renderPagination(topPag, totalPages, pageNum, (newPage) => loadPublications(newPage, true, currentPubFilter, false));
         container.appendChild(topPag);
 
         const contentArea = document.createElement('div');
@@ -1026,7 +1053,7 @@ async function loadPublications(pageNum = 1, scrollToTop = false, filterCategory
         container.appendChild(contentArea);
 
         const bottomPag = document.createElement('div');
-        renderPagination(bottomPag, totalPages, pageNum, (newPage) => loadPublications(newPage, true));
+        renderPagination(bottomPag, totalPages, pageNum, (newPage) => loadPublications(newPage, true, currentPubFilter, false));
         container.appendChild(bottomPag);
 
         // Scroll to top behavior
@@ -1240,8 +1267,17 @@ function copyBibtex(btn) {
 // 전역 변수로 멤버 데이터 저장
 let allMemberRows = [];
 
-async function loadMembers(pageType) {
+async function loadMembers(pageType, isInitialLoad = false) {
     try {
+        const container = document.getElementById('member-list');
+        if (!container) return;
+
+        // Hydration check
+        if (isInitialLoad && container.children.length > 0 && container.innerHTML.includes('member-card')) {
+            // HTML already pre-rendered by Python for SEO & visual display
+            return;
+        }
+
         const response = await fetch('/Members/members.csv');
         const text = await response.text();
         allMemberRows = parseCSV(text); // 데이터 저장
