@@ -23,27 +23,23 @@ let currentProjectRows = []; // Store project items for pagination
 async function loadComponents() {
     try {
         const headerPlaceholder = document.getElementById('header-placeholder');
-        if (headerPlaceholder) {
+        if (headerPlaceholder && headerPlaceholder.children.length === 0) {
             const response = await fetch('/components/header.html');
-            if (!response.ok) {
-                throw new Error(`Failed to load header: ${response.status} ${response.statusText}`);
+            if (response.ok) {
+                headerPlaceholder.innerHTML = await response.text();
+            } else {
+                console.error(`Failed to load header: ${response.status} ${response.statusText}`);
             }
-            const text = await response.text();
-            headerPlaceholder.innerHTML = text;
-        } else {
-            console.error('Header placeholder not found!');
         }
 
         const footerPlaceholder = document.getElementById('footer-placeholder');
-        if (footerPlaceholder) {
+        if (footerPlaceholder && footerPlaceholder.children.length === 0) {
             const response = await fetch('/components/footer.html');
-            if (!response.ok) {
-                throw new Error(`Failed to load footer: ${response.status} ${response.statusText}`);
+            if (response.ok) {
+                footerPlaceholder.innerHTML = await response.text();
+            } else {
+                console.error(`Failed to load footer: ${response.status} ${response.statusText}`);
             }
-            const text = await response.text();
-            footerPlaceholder.innerHTML = text;
-        } else {
-            console.error('Footer placeholder not found!');
         }
 
         // 팝업 로드 (홈페이지일 경우에만)
