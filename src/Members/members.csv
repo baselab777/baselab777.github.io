@@ -1,5 +1,5 @@
 Type,image,name_kr,name_en,interest_kr,interest_en,intro_kr,intro_en,email,website,github,linkedin,instagram,facebook,thread,google scholar,dblp,orcid,current,year,cv
-Undergraduate,Taein_Yoon.webp,윤태인***,Taein Yoon,"Data4AI, AI 시스템","Data4AI, AI system","AI가 어떻게 데이터를 받고, 해석하고,
+Undergraduate,Taein_Yoon.webp,윤태인***,Taein Yoon***,"Data4AI, AI 시스템","Data4AI, AI system","AI가 어떻게 데이터를 받고, 해석하고,
  이용해야 하는지 연구합니다.","I study how AI should receive, interpret, and utilize data.",xodls500@dgist.ac.kr,,https://github.com/Taepoung,https://www.linkedin.com/in/taeinyoon/,,,,,,,,,
 Ph.D.,Jeongjin_Ju.jpg,주정진,Jeongjin Ju,"SE4AI, Data4AI","SE4AI, Data4AI","agent 행동의 interpretability를 바탕으로 
 의사결정의 이유를 설명하고, 더 나은 행동을 이끌어내는 방법을 연구합니다.","Based on agent interpretability, 
@@ -16,3 +16,4 @@ Intern,Robera.jpg,"Robera Abera
 ","비전 언어 모델, AI4SE","VLM, AI4SE",저의 연구 관심 분야는 Vision-Language Models(VLMs)와 소프트웨어 공학입니다. 멀티모달 AI를 활용하여 소프트웨어 개발 및 자동화를 향상시키는 연구를 수행하고 있습니다.,My research interests include Vision-Language Models (VLMs) and their integration into Software Engineering. I aim to explore how multimodal AI can enhance software development and automation. ,roberaasmera@gmail.com ,https://www.robera.dev,https://github.com/roba-6734,https://www.linkedin.com/in/robera-abera/,,,,,,,,,
 Intern,ZekaEmo.jpg,Zeka Emo,Zeka Emo,"소프트웨어 공학, 컴퓨터 비전, 인공지능 ","Software Engineering, Computer Vision, Artificial Intelligence ",AI가 소프트웨어 공학 실무를 어떻게 개선할 수 있는지 탐구하는 데 관심이 있습니다.,"I'm interested in exploring how AI can improve software engineering practices
 ",zeka.emo30@gmail.com,,https://github.com/zekaemo,https://www.linkedin.com/in/zekaemo,,,,,,,,,https://drive.google.com/file/d/1nDFFKsvqoQdx1X2mcTVbDO-ZxQSsl1qL/view?usp=sharing
+Intern,Mohamed_Makram.jpg,Mohamed Kawouk,Mohamed Kawouk,"AI/ML, 자연어처리, LLM, 코드 생성, AI 평가","AI/ML, NLP, LLM, Code Generation, AI Evaluation",,"I am a senior computer science student with a strong interest in AI, particularly LLMs and code generation. I am passionate about problem-solving and exploring how AI systems can be designed, evaluated, and improved in terms of performance and reliability.",mohamed.kawoud@ejust.edu.eg,,https://github.com/Mohamed-Makram47,https://www.linkedin.com/in/mohamed-makram--/,,,,,,,,,
