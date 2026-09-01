@@ -1,16 +1,16 @@
 Type,image,name_kr,name_en,interest_kr,interest_en,intro_kr,intro_en,email,website,github,linkedin,instagram,facebook,thread,google scholar,dblp,orcid,current,year,cv
-Undergraduate,Taein_Yoon.jpg,윤태인***,Taein Yoon***,"Data4AI, AI 시스템","Data4AI, AI system","B.S. EE&CS, DGIST (2021 ~ present)","B.S. EE&CS, DGIST (2021 ~ present)",xodls500@dgist.ac.kr,,https://github.com/Taepoung,https://www.linkedin.com/in/taeinyoon/,,,,,,,,,
+Undergraduate,Taein_Yoon.jpg,윤태인***,Taein Yoon***,"Data Dynamics in AI System","Data Dynamics in AI System","B.S. EE&CE, DGIST (2021 ~ present)","B.S. EE&CE, DGIST (2021 ~ present)",xodls500@dgist.ac.kr,,https://github.com/Taepoung,https://www.linkedin.com/in/taeinyoon/,,,,,,,,,
 Ph.D.,Jeongjin_Ju.jpg,주정진,Jeongjin Ju,"SE4AI, Data4AI","SE4AI, Data4AI","Ph.D. EECS, DGIST (2026 ~ present)
-M.S. CS, 충북대 (2024 ~ 2025)
+M.S. CE, 충북대 (2024 ~ 2025)
 B.S. EE, 충북대 (2019 ~ 2023)","Ph.D. EECS, DGIST (2026 ~ present)
-M.S. CS, CBNU (2024 ~ 2025)
+M.S. CE, CBNU (2024 ~ 2025)
 B.S. EE, CBNU (2019 ~ 2023)",jeongjin_ju@dgist.ac.kr,,https://github.com/Jqudes,,,,,,,,,,
 M.S.,SeongminJu.jpeg,주성민,Seongmin Ju,"신뢰할 수 있는 AI 기반 소프트웨어공학","Trustworthy AI for Software Engineering","M.S. AI, DGIST (2026 ~ present)
-B.S. EE&CS, DGIST (2021 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
-B.S. EE&CS, DGIST (2021 ~ 2024)",netraa2008@dgist.ac.kr,,https://github.com/nunu0404,https://www.linkedin.com/in/성민-주-822325334?utm_source=share_via&utm_content=profile&utm_medium=member_android,,,,,,,,,
-M.S.,Hrish.jpg,Hrishikesh Ethari,Hrishikesh Ethari,AI4SE,AI4SE,"M.S. 
-B.S. ","M.S. 
-B.S. ",hrishikesh.ethari@dgist.ac.kr,,https://github.com/unpaidresearcher,https://www.linkedin.com/in/hrishikesh-ethari-060609248/,,,,https://scholar.google.com/citations?user=_7TqVYcAAAAJ,,https://orcid.org/0009-0002-3836-7003,,,https://drive.google.com/drive/folders/1u8lNQ8G8CqXD-9pPRTpTIhQoYP_Tckvp
+B.S. EE&CE, DGIST (2021 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
+B.S. EE&CE, DGIST (2021 ~ 2024)",netraa2008@dgist.ac.kr,,https://github.com/nunu0404,https://www.linkedin.com/in/성민-주-822325334?utm_source=share_via&utm_content=profile&utm_medium=member_android,,,,,,,,,
+M.S.,Hrish.jpg,Hrishikesh Ethari,Hrishikesh Ethari,AI4SE,AI4SE,"M.S. AI, DGIST (2026 ~ present)
+B.S. CSE, IIIT Manipur (2020 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
+B.S. CSE, IIIT Manipur (2020 ~ 2024)",hrishikesh.ethari@dgist.ac.kr,,https://github.com/unpaidresearcher,https://www.linkedin.com/in/hrishikesh-ethari-060609248/,,,,https://scholar.google.com/citations?user=_7TqVYcAAAAJ,,https://orcid.org/0009-0002-3836-7003,,,https://drive.google.com/drive/folders/1u8lNQ8G8CqXD-9pPRTpTIhQoYP_Tckvp
 M.S.,Inhyeok_Kang.jpg,강인혁,Inhyeok Kang,SOTA AI strategy,SOTA AI strategy,"M.S. AI, DGIST (2026 ~ present)
 B.S. 충남대, DGIST (2018 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
 B.S. CNU, DGIST (2018 ~ 2024)",15inhyuk@gmail.com,,https://github.com/inhyuk15?tab=repositories,https://www.linkedin.com/in/inhyuk-kang-a6a6b8250,,,,,,,,,
@@ -24,7 +24,7 @@ B.S. 융복합 공학사, DGIST (2019 ~ 2026)","M.S. AI, DGIST (2026 ~ present)
 B.S. Convergence Engineering, DGIST (2019 ~ 2026)",hanth0523@dgist.ac.kr,,https://github.com/YUZUS-oda,,,,,,,,,,
 Undergraduate,Wootaek_Cho.jpg,조우택,Wootaek Cho,"소프트웨어 공학, AI","Software Engineering, AI","B.S. CS, DGIST (2022 ~ present)","B.S. CS, DGIST (2022 ~ present)",cwt@dgist.ac.kr,,https://github.com/whdnxor,,,,,,,,,,
 Undergraduate,Seula_Yang.jpg,양슬아,Seula Yang,"LLM, AI 학습용 데이터셋","LLM, Data4AI","B.S. CS, DGIST (2022 ~ present)","B.S. CS, DGIST (2022 ~ present)",irene031209@dgist.ac.kr,,,,,,,,,,,,
-Undergraduate,Jiun_Choi.png,최지운,Jiun Choi,"대규모 언어 모델, 코드 LLM, 딥러닝","Large Language Models, Code LLMs, Deep Learning",B.S. ,B.S. ,jiun1208@dgist.ac.kr,,,,,,,,,,,,
+Undergraduate,Jiun_Choi.png,최지운,Jiun Choi,"대규모 언어 모델, 코드 LLM, 딥러닝","Large Language Models, Code LLMs, Deep Learning","B.S. CS, DGIST (2024 ~ present)","B.S. CS, DGIST (2024 ~ present)",jiun1208@dgist.ac.kr,,,,,,,,,,,,
 Alumni-Intern,,권대호,Daeho Kwon,,,,,,,,,,,,,,,Kyungpook National University,2026,
 Alumni-Intern,Robera.jpg,"Robera Abera 
 ","Robera Abera 
