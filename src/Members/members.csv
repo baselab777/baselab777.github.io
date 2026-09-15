@@ -1,11 +1,17 @@
 Type,image,name_kr,name_en,interest_kr,interest_en,intro_kr,intro_en,email,website,github,linkedin,instagram,facebook,thread,google scholar,dblp,orcid,current,year,cv
-Undergraduate,Taein_Yoon.jpg,윤태인***,Taein Yoon***,"Data Dynamics in AI System","Data Dynamics in AI System","B.S. EE&CE, DGIST (2021 ~ present)","B.S.&M.S. Integrated EE&CE, DGIST
-(2021 ~ present)",xodls500@dgist.ac.kr,,https://github.com/Taepoung,https://www.linkedin.com/in/taeinyoon/,,,,,,,,,
 Ph.D.,Jeongjin_Ju.jpg,주정진,Jeongjin Ju,"SE4AI, Data4AI","SE4AI, Data4AI","Ph.D. EECS, DGIST (2026 ~ present)
 M.S. CE, 충북대 (2024 ~ 2025)
 B.S. EE, 충북대 (2019 ~ 2023)","Ph.D. EECS, DGIST (2026 ~ present)
 M.S. CE, CBNU (2024 ~ 2025)
 B.S. EE, CBNU (2019 ~ 2023)",jeongjin_ju@dgist.ac.kr,,https://github.com/Jqudes,,,,,,,,,,
+Ph.D.,Changseob_Yun.webp,윤창섭,Changseob Yun,"비전 언어 모델, 비디오 이해, 멀티모달 학습","Vision-Language Model, Video Understanding, Multimodal Learning","Ph.D.  DGIST (2022 ~ present)
+M.S. 
+B.S.","Ph.D.  DGIST (2022 ~ present)
+M.S. 
+B.S. ",changsub.yun@dgist.ac.kr,,https://github.com/changsubi,https://www.linkedin.com/in/changseob-yun-8a5ab9378,,,,https://scholar.google.com/citations?user=DDiXV48AAAAJ&hl=ko,,https://orcid.org/0009-0005-3665-9864,,,
+Intern,,김종훈,Jounghoon Kim,"AI4SE, AI 최적화","AI4SE, AI optimization","B.S. CSE, CUHK (2017 ~ 2024)
+M.S. CSE, HKUST (2024 ~ present)","B.S. CSE, CUHK (2017 ~ 2024)
+M.S. CSE, HKUST (2024 ~ present)",kjh97507@gmail.com,,,,,,,,,,,,
 M.S.,SeongminJu.jpeg,주성민,Seongmin Ju,"신뢰할 수 있는 AI 기반 소프트웨어공학","Trustworthy AI for Software Engineering","M.S. AI, DGIST (2026 ~ present)
 B.S. EE&CE, DGIST (2021 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
 B.S. EE&CE, DGIST (2021 ~ 2024)",netraa2008@dgist.ac.kr,,https://github.com/nunu0404,https://www.linkedin.com/in/성민-주-822325334?utm_source=share_via&utm_content=profile&utm_medium=member_android,,,,,,,,,
@@ -15,19 +21,17 @@ B.S. CSE, IIIT Manipur (2020 ~ 2024)",hrishikesh.ethari@dgist.ac.kr,,https://git
 M.S.,Inhyeok_Kang.jpg,강인혁,Inhyeok Kang,SOTA AI strategy,SOTA AI strategy,"M.S. AI, DGIST (2026 ~ present)
 B.S. 충남대, DGIST (2018 ~ 2024)","M.S. AI, DGIST (2026 ~ present)
 B.S. CNU, DGIST (2018 ~ 2024)",15inhyuk@gmail.com,,https://github.com/inhyuk15?tab=repositories,https://www.linkedin.com/in/inhyuk-kang-a6a6b8250,,,,,,,,,
-Ph.D.,Changseob_Yun.webp,윤창섭,Changseob Yun,"비전 언어 모델, 비디오 이해, 멀티모달 학습","Vision-Language Model, Video Understanding, Multimodal Learning","Ph.D.  DGIST (2022 ~ present)
-M.S. 
-B.S.","Ph.D.  DGIST (2022 ~ present)
-M.S. 
-B.S. ",changsub.yun@dgist.ac.kr,,https://github.com/changsubi,https://www.linkedin.com/in/changseob-yun-8a5ab9378,,,,https://scholar.google.com/citations?user=DDiXV48AAAAJ&hl=ko,,https://orcid.org/0009-0005-3665-9864,,,
 M.S.,Taehyeon_Han.png,한태현,Taehyeon Han,"소프트웨어 공학, AI","Software Engineering, AI","M.S. AI, DGIST (2026 ~ present)
 B.S. 융복합 공학사, DGIST (2019 ~ 2026)","M.S. AI, DGIST (2026 ~ present)
 B.S. Convergence Engineering, DGIST
 (2019 ~ 2026)",hanth0523@dgist.ac.kr,,https://github.com/YUZUS-oda,,,,,,,,,,
-Undergraduate,Wootaek_Cho.jpg,조우택,Wootaek Cho,"소프트웨어 공학, AI","Software Engineering, AI","B.S. CS, DGIST (2022 ~ present)","B.S. CS, DGIST (2022 ~ present)",cwt@dgist.ac.kr,,https://github.com/whdnxor,,,,,,,,,,
-Undergraduate,Seula_Yang.jpg,양슬아,Seula Yang,"LLM, AI 학습용 데이터셋","LLM, Data4AI","B.S. CS, DGIST (2022 ~ present)","B.S. CS, DGIST (2022 ~ present)",irene031209@dgist.ac.kr,,,,,,,,,,,,
-Undergraduate,Jiun_Choi.png,최지운,Jiun Choi,"대규모 언어 모델, 코드 LLM, 딥러닝","Large Language Models, Code LLMs, Deep Learning","B.S. CS, DGIST (2024 ~ present)","B.S. CS, DGIST (2024 ~ present)",jiun1208@dgist.ac.kr,,,,,,,,,,,,
-Undergraduate,Altair.png,Altair Murat,Altair Murat,"소프트웨어 공학, LLM, 컴퓨터비전, Math inside AI","Software Engineering, LLM, Computer Vision, Math inside AI","B.S. CS, DGIST (2025 ~ present)","B.S. CS, DGIST (2025 ~ present)",altair_murat@dgist.ac.kr,,https://github.com/altairmurat,https://www.linkedin.com/in/murat-altair-didaruly/,,,,,,,,,
+Undergraduate,Taein_Yoon.jpg,윤태인,Taein Yoon,"Data Dynamics in AI System","Data Dynamics in AI System","B.S. EE&CE, DGIST (2021 ~ present)","B.S.&M.S. Integrated EE&CE, DGIST
+(2021 ~ present)",xodls500@dgist.ac.kr,,https://github.com/Taepoung,https://www.linkedin.com/in/taeinyoon/,,,,,,,,,
+Undergraduate,Wootaek_Cho.jpg,조우택,Wootaek Cho,"소프트웨어 공학, AI","Software Engineering, AI","B.S. CE, DGIST (2022 ~ present)","B.S. CE, DGIST (2022 ~ present)",cwt@dgist.ac.kr,,https://github.com/whdnxor,,,,,,,,,,
+Undergraduate,Seula_Yang.jpg,양슬아,Seula Yang,"LLM, AI 학습용 데이터셋","LLM, Data4AI","B.S. CE, DGIST (2022 ~ present)","B.S. CE, DGIST (2022 ~ present)",irene031209@dgist.ac.kr,,,,,,,,,,,,
+Undergraduate,Jiun_Choi.png,최지운,Jiun Choi,"대규모 언어 모델, 코드 LLM, 딥러닝","Large Language Models, Code LLMs, Deep Learning","B.S. CE, DGIST (2024 ~ present)","B.S. CE, DGIST (2024 ~ present)",jiun1208@dgist.ac.kr,,,,,,,,,,,,
+Undergraduate,Altair.png,Altair Murat,Altair Murat,"소프트웨어 공학, LLM, 컴퓨터비전, Math inside AI","Software Engineering, LLM, Computer Vision, Math inside AI","B.S. CE, DGIST (2025 ~ present)","B.S. CE, DGIST (2025 ~ present)",altair_murat@dgist.ac.kr,,https://github.com/altairmurat,https://www.linkedin.com/in/murat-altair-didaruly/,,,,,,,,,
+Undergraduate,Tsevelmaa.png,Tsevelmaa Erdenebat,Tsevelmaa Erdenebat,AI,AI,"B.S. CE, DGIST (2023 ~ present)","B.S. CE, DGIST (2023 ~ present)",tsevelmaa@dgist.ac.kr,,,,,,,,,,,,
 Alumni-Intern,,권대호,Daeho Kwon,,,,,,,,,,,,,,,Kyungpook National University,2026,
 Alumni-Intern,Robera.jpg,"Robera Abera 
 ","Robera Abera 
