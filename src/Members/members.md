@@ -18,8 +18,8 @@ The `members.csv` file uses the following columns. Please ensure you maintain th
 | **name_en** | 영어 이름 | English Name | `Chulsoo Kim` |
 | **interest_kr** | 연구 관심사 (한국어) | Research Interests (KR) | `소프트웨어 공학; AI` |
 | **interest_en** | 연구 관심사 (영어) | Research Interests (EN) | `Software Engineering; AI` |
-| **intro_kr** | 소개글 (한국어) | Short Bio (KR) | `안녕하세요. AI를 연구합니다.` |
-| **intro_en** | 소개글 (영어) | Short Bio (EN) | `Hello. I research AI.` |
+| **intro_kr** | 학적 (한국어) | Education (KR) | `Ph.D. EECS, OO대 (2026 ~ present)` |
+| **intro_en** | 학적 (영어) | Education (EN) | `Ph.D. EECS, DGIST (2026 ~ present)` |
 | **email** | 이메일 주소 | Email address | `user@dgist.ac.kr` |
 | **website** | 개인 홈페이지 URL | Personal website | `https://myhome.com` |
 | **github** | GitHub 아이디 또는 URL | GitHub handle or URL | `mygithub` |
